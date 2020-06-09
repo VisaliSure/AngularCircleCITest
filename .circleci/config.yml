@@ -33,7 +33,7 @@ jobs:
       - common/npm-install
       - run:
           name: Building
-          command: npm run build -- << parameters.project >>
+          command: npm run build AngularCircleCITest
       - unless:
           condition: << parameters.skip-tests >>
           steps:
@@ -59,7 +59,7 @@ jobs:
       - common/npm-install
       - run:
           name: Building
-          command: npm run build -- << parameters.project >>
+          command: npm run build AngularCircleCITest
       - persist_to_workspace:
           root: .
           paths:
