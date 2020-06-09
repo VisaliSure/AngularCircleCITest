@@ -2,11 +2,6 @@
 # https://circleci.com/orbs/registry/licensing for details.
 version: 2.1
 
-description: |
-  Build and publish Ionic/Angular libraries.
-  Repository: https://github.com/okode/orbs
-
-
 executors:
   node:
     docker:
@@ -33,7 +28,7 @@ jobs:
       - common/npm-install
       - run:
           name: Building
-          command: npm run build AngularCircleCITest
+          command: npm run build 
       - unless:
           condition: << parameters.skip-tests >>
           steps:
@@ -59,7 +54,7 @@ jobs:
       - common/npm-install
       - run:
           name: Building
-          command: npm run build AngularCircleCITest
+          command: npm run build 
       - persist_to_workspace:
           root: .
           paths:
