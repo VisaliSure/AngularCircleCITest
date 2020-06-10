@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/project 
+    working_directory: ~/app/AngularCircleCITest/ClientApp 
     docker:
       - image: circleci/node:8-browsers
     steps:
